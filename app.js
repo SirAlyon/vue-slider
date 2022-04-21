@@ -54,8 +54,21 @@ const app = new Vue({
             if (this.active_image === this.images.length){
                 this.active_image = 0
             }
-        }
-    }
+        },
+        autoplay(){
+            let element = this;
+            setInterval(function () {
+                element.active_image++
+                console.log(element.active_image);
+                if (element.active_image === element.images.length){
+                    element.active_image = 0
+                }
+            }, 3000);
+        },
+    },
+    /* mounted () {
+        this.autoplay()
+      } */
 });
 
 

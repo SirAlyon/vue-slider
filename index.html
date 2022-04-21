@@ -20,12 +20,15 @@
                 </div>
             </div>
             <div class="thumbnails">
-                <img :src="thumb.image" v-for="(thumb, index) in images" :class="active_image === index ? 'active' : '' ">
+                <img :src="thumb.image" v-for="(thumb, index) in images" :class="active_image === index ? 'active' : '' " @click="active_image = index">
                 <div class="arrows">
                     <i class="fa-solid fa-angles-up" @click="slide_up"></i>
                     <i class="fa-solid fa-angles-down" @click="slide_down"></i>
                 </div>
             </div>
+        </div>
+        <div class="autoplay">
+            <button @click="autoplay">Start Autoplay</button>
         </div>
     </div>
 
