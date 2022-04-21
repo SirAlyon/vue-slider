@@ -35,7 +35,26 @@ const app = new Vue({
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             }
         ],
-        active_image = 0
+        active_image: 0
+    },
+    methods: {
+        slide_up(){
+            console.log('Slid up');
+            if (this.active_image === 0){
+                this.active_image += this.images.length
+            }
+            this.active_image --
+            console.log(this.active_image, this);
+            
+        },
+        slide_down(){
+            console.log('Slid down');
+            this.active_image ++
+            console.log(this.active_image);
+            if (this.active_image === this.images.length){
+                this.active_image = 0
+            }
+        }
     }
 });
 
@@ -67,7 +86,7 @@ imagess = [
     }
 ]
 
-console.log(imagess.image);
+console.log(imagess.image, imagess.length);
 /* Adesso rimuoviamo il markup statico in eccesso e 
 inseriamo le immagini dinamicamente servendoci della struttura 
 dati fornita. Stampiamo prima l'immagine grande e usiamo la direttiva 
