@@ -37,7 +37,7 @@ const app = new Vue({
         ],
         active_image: 0
     },
-    methods: {
+    methods: {  
         slide_up(){
             console.log('Slid up');
             if (this.active_image === 0){
@@ -58,35 +58,7 @@ const app = new Vue({
     }
 });
 
-imagess = [
-    {
-        image: 'img/01.jpg',
-        title: 'Svezia',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-    },
-    {
-        image: 'img/02.jpg',
-        title: 'Svizzera',
-        text: 'Lorem ipsum.',
-    },
-    {
-        image: 'img/03.jpg',
-        title: 'Gran Bretagna',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    },
-    {
-        image: 'img/04.jpg',
-        title: 'Germania',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.',
-    },
-    {
-        image: 'img/05.jpg',
-        title: 'Paradise',
-        text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
-    }
-]
 
-console.log(imagess.image, imagess.length);
 /* Adesso rimuoviamo il markup statico in eccesso e 
 inseriamo le immagini dinamicamente servendoci della struttura 
 dati fornita. Stampiamo prima l'immagine grande e usiamo la direttiva 
